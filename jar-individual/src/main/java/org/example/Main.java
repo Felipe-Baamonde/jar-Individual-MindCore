@@ -1,11 +1,12 @@
 package org.example;
 
 import com.github.britooo.looca.api.core.Looca;
+import com.github.britooo.looca.api.group.processador.Processador;
 import com.github.britooo.looca.api.group.sistema.Sistema;
 import com.github.britooo.looca.api.group.temperatura.Temperatura;
 
 import java.util.Scanner;
-import java.util.Timer;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +14,9 @@ public class Main {
         Scanner leitor = new Scanner(System.in);
 
         Sistema sistema = looca.getSistema();
+        Processador processador = looca.getProcessador();
         System.out.println(sistema);
+        System.out.println(processador);
         Integer opcao = 1;
         while(opcao.equals(1) == true){
             Temperatura temperatura = looca.getTemperatura();
@@ -26,9 +29,8 @@ public class Main {
                 System.out.println("""
                     Possíveis soluções:
                     -Limpeza;
-                    -Pasta térmica ressecada;
-                    -Problemas com o cooler;
-                    -Baixa circulação de ar ;
+                    -Trocar pasta térmica;
+                    -Verificar Coolers;
                     """);
         }
             System.out.println("""
