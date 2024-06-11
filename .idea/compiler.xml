@@ -9,5 +9,8 @@
         <module name="jar-individual" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="login-mind-core" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
